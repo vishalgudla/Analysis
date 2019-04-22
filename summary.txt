@@ -1,0 +1,51 @@
+
+Call:
+lm(formula = overall_rating ~ location_and_surrounding_rating + 
+    room_rating + service_rating + gastronomy_rating + sports_and_entertainment_rating + 
+    hotel_rating + factor(traveled_as) + factor(children) + factor(reason_for_travel) + 
+    factor(age_group), data = first.df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.84246 -0.11670 -0.03313  0.07827  1.49635 
+
+Coefficients:
+                                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                   0.124126   0.184665   0.672 0.501651    
+location_and_surrounding_rating               0.130052   0.010254  12.683  < 2e-16 ***
+room_rating                                   0.160437   0.014405  11.138  < 2e-16 ***
+service_rating                                0.119281   0.012695   9.396  < 2e-16 ***
+gastronomy_rating                             0.136279   0.014967   9.105  < 2e-16 ***
+sports_and_entertainment_rating               0.114672   0.008472  13.535  < 2e-16 ***
+hotel_rating                                  0.354548   0.016690  21.243  < 2e-16 ***
+factor(traveled_as)Family                    -0.158674   0.052033  -3.050 0.002360 ** 
+factor(traveled_as)Friends                    0.021903   0.035448   0.618 0.536800    
+factor(traveled_as)Traveling alone            0.044050   0.027378   1.609 0.107974    
+factor(children)2                            -0.141999   0.091638  -1.550 0.121599    
+factor(children)3                            -0.161123   0.267785  -0.602 0.547533    
+factor(children)4                             0.578945   0.269337   2.150 0.031862 *  
+factor(children)More than 4                  -0.272491   0.271813  -1.002 0.316377    
+factor(children)No children                  -0.241950   0.066626  -3.631 0.000298 ***
+factor(reason_for_travel)City                 0.204061   0.155090   1.316 0.188594    
+factor(reason_for_travel)Hiking and wellness  0.211690   0.176070   1.202 0.229563    
+factor(reason_for_travel)Job                  0.174399   0.154569   1.128 0.259497    
+factor(reason_for_travel)Other                0.184860   0.156958   1.178 0.239204    
+factor(age_group)19-25                       -0.135054   0.084755  -1.593 0.111411    
+factor(age_group)26-30                       -0.100427   0.083096  -1.209 0.227152    
+factor(age_group)31-35                       -0.158152   0.083250  -1.900 0.057792 .  
+factor(age_group)36-40                       -0.159180   0.082747  -1.924 0.054710 .  
+factor(age_group)41-45                       -0.177725   0.083149  -2.137 0.032834 *  
+factor(age_group)46-50                       -0.195138   0.082514  -2.365 0.018247 *  
+factor(age_group)51-55                       -0.174725   0.084458  -2.069 0.038854 *  
+factor(age_group)56-60                       -0.096207   0.088377  -1.089 0.276629    
+factor(age_group)61-65                       -0.142757   0.092074  -1.550 0.121385    
+factor(age_group)66-70                       -0.090028   0.101873  -0.884 0.377078    
+factor(age_group)71+                         -0.135409   0.119117  -1.137 0.255939    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2603 on 893 degrees of freedom
+  (3611 observations deleted due to missingness)
+Multiple R-squared:  0.9323,	Adjusted R-squared:  0.9301 
+F-statistic: 423.9 on 29 and 893 DF,  p-value: < 2.2e-16
+
